@@ -27,7 +27,7 @@ public class Main {
         System.out.println("Задание 2");
         System.out.printf("Исходный список %s\n", listOfInteger);
         // будем считать что нумерация элементов списка начинается с 0-го
-        System.out.printf("Третий элемент списка: %s\n", listOfInteger.get(3));
+        System.out.printf("Третий элемент списка: %s\n", listOfInteger.get(2));
 
         /**
          * 3) Удаление элемента
@@ -35,7 +35,7 @@ public class Main {
          */
         System.out.println("Задание 3");
         System.out.printf("Исходный список %s\n", listOfInteger);
-        listOfInteger.remove(2);
+        listOfInteger.remove(1);
         System.out.printf("Список после удаления второго эелемента: %s\n", listOfInteger);
 
         /**
@@ -143,9 +143,9 @@ public class Main {
          */
         System.out.println("Задание 12");
         System.out.printf("Исходный список строк %s\n", listOfString);
-        System.out.printf("Инвертированный список строк %s\n", getInvertListOfString(listOfString));
+        System.out.printf("Инвертированный список строк %s\n", getInvertList(listOfString));
         System.out.printf("Исходный список чисел %s\n", listOfInteger);
-        System.out.printf("Инвертированный список чисел %s\n", getInvertListOfNum(listOfInteger));
+        System.out.printf("Инвертированный список чисел %s\n", getInvertList(listOfInteger));
 
         /**
          * 13) Объединение двух списков без дубликатов
@@ -153,12 +153,12 @@ public class Main {
          */
         System.out.println("Задание 13");
         //первый список. создание и заполнение
-        List<Integer> listOfIntFirst = new ArrayList<Integer>();
+        List<Integer> listOfIntFirst = new ArrayList<>();
         listOfIntFirst.add(1);
         listOfIntFirst.add(2);
         listOfIntFirst.add(3);
         //второй список. создание и заполнение
-        List<Integer> listOfIntSecond = new ArrayList<Integer>();
+        List<Integer> listOfIntSecond = new ArrayList<>();
         listOfIntSecond.add(1);
         listOfIntSecond.add(2);
         listOfIntSecond.add(5);
@@ -176,7 +176,7 @@ public class Main {
          * Считайте List<Integer> и посчитайте сумму только нечётных чисел
          */
         System.out.println("Задание 14");
-        List<Integer> listNumbers = new ArrayList<Integer>();
+        List<Integer> listNumbers = new ArrayList<>();
         // заполнение списка
         for (int i = 0; i < 10; i++) {
             listNumbers.add((int) (Math.random() * 100) + 1);
@@ -254,16 +254,11 @@ public class Main {
     }
 
     //возвращает список чисел в обратном порядке
-    public static List<Integer> getInvertListOfNum(List<Integer> list) {
+    public static List getInvertList(List list) {
         Collections.reverse(list);
         return list;
     }
 
-    //возвращает список строк в обратном порядке
-    public static List<String> getInvertListOfString(List<String> list) {
-        Collections.reverse(list);
-        return list;
-    }
 
     //ищем сумму нечетных чисел в списке numbers
     public static long getSumOddNumbers(List<Integer> numbers) {

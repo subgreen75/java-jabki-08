@@ -34,7 +34,7 @@ class MainTest {
         listInvert.add(3);
         listInvert.add(2);
         listInvert.add(1);
-        Assertions.assertEquals(listInvert, Main.getInvertListOfNum(list));
+        Assertions.assertEquals(listInvert, Main.getInvertList(list));
 
         List<String> listStr = new ArrayList<String>();
         listStr.add("a");
@@ -46,7 +46,7 @@ class MainTest {
         listStrInvert.add("b");
         listStrInvert.add("a");
 
-        Assertions.assertEquals(listStrInvert, Main.getInvertListOfString(listStr));
+        Assertions.assertEquals(listStrInvert, Main.getInvertList(listStr));
     }
 
     @Test
